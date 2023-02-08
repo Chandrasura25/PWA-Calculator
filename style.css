@@ -1,0 +1,113 @@
+body {
+  background: #eaeaea;
+}
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2)
+    format("woff2");
+}
+.cont {
+  background: #eaeaea;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.08), -6px -6px 12px rgba(255, 255, 255, 1);
+  height: 450px;
+  width: 270px;
+}
+h2 {
+  font-size: 7em;
+  color: #eaeaea;
+  text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.08), -6px -6px 12px rgba(255, 255, 255, 1);
+}
+.screen {
+  padding: 30px 43px;
+  position: relative;
+  background: #eaeaea;
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.08), inset -6px -6px 12px rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+  text-align: right;
+}
+button {
+  place-items: center;
+  margin-left: 3px;
+  height: 50px;
+  width: 60px;
+  color: #aaa;
+  text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.08), -6px -6px 12px rgba(255, 255, 255, 1);
+  background: #eaeaea;
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.08), inset -6px -6px 12px rgba(255, 255, 255, 1);
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #333;
+}
+@media (max-width:800px) {
+  h2 {
+    font-size: 5em;
+    margin-bottom: 30px;
+  }
+}
+#toolbar {
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
+  justify-content: space-evenly;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  margin: 5px;
+}
+ul li {
+  margin-bottom: 12px;
+  border-top: 2px dotted #333;
+  padding-top: 5px;
+}
+body > #toolbar {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #aaa;
+}
+span.icon {
+  font-family: "Material Icons";
+  display: inline-block;
+  font-feature-settings: "liga";
+  margin-bottom: 0px;
+  color: var(--color-icon-front);
+  font-size: 16px;
+  vertical-align: sub;
+  user-select: none;
+}
+.btn{
+  display: block;
+  font-size: 13px;
+  padding: 8px 8px;
+  line-height: 1;
+  margin: 8px 8px;
+  font-weight: bold;
+  border-radius: 8px;
+  user-select: none;
+}
+
+@media (display-mode: standalone), (display-mode: minimal-ui) {
+  body > #toolbar {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+      env(safe-area-inset-bottom) env(safe-area-inset-left) !important;
+  }
+  #itemInstall {
+    display: none;
+  }
+}

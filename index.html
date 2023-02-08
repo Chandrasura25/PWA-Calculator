@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover" />
+    <title>Calculator</title>
+    <link rel="apple-touch-icon" href="icons/Calculator-icon-512x512.png" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#eaeaea" />
+    <script src="registerWorker.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body class="d-flex justify-content-center align-items-center">
+    <div class="p-2">
+      <h2 class="text-center text-uppercase">calculator</h2>
+      <div class="cont mx-auto">
+        <div class="mx-auto">
+          <input type="text" name="txt" id="result" class="screen" disabled />
+        </div>
+        <div class="mt-1">
+          <div class="first">
+            <button onclick="butt(7)" id="seven">7</button>
+            <button onclick="butt(8)" id="eight">8</button>
+            <button onclick="butt(9)" id="nine">9</button>
+            <button onclick="butt('-')" id="minus">-</button>
+          </div>
+          <br />
+          <div class="second">
+            <button onclick="butt(4)" id="four">4</button>
+            <button onclick="butt(5)" id="five">5</button>
+            <button onclick="butt(6)" id="six">6</button>
+            <button onclick="butt('/')" id="divide">/</button>
+          </div>
+          <br />
+          <div class="third">
+            <button onclick="butt(1)" id="one">1</button>
+            <button onclick="butt(2)" id="two">2</button>
+            <button onclick="butt(3)" id="three">3</button>
+            <button onclick="butt('*')" id="multiply">*</button>
+          </div>
+          <br />
+          <div class="forth">
+            <button onclick="butt('.')" id="dot">.</button>
+            <button onclick="butt(0)" id="zero">0</button>
+            <button onclick="ss()" id="equal">=</button>
+            <button onclick="butt('+')" id="add">+</button>
+          </div>
+          <br />
+          <div id="de">
+            <button onclick="del(del)" id="del">DEL</button>
+            <button onclick="butt('%')" id="percent">%</button>
+            <button onclick="mm()" id="double">C</button>
+            <button
+              onclick="document.getElementById('result').value +='00'"
+              id="doublezero"
+            >
+              00
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="fixed-bottom shadow-sm">
+        <ul id="toolbar">
+          <li>
+            <button id="btnShare" class="btn">
+              <span class="icon">share</span>
+              Share
+            </button>
+          </li>
+          <li id="itemInstall">
+            <button id="btnInstall" class="btn">
+              <span class="icon">download</span>
+              Install
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function butt(func) {
+        result.value += func;
+      }
+      function del() {
+        let del = result.value;
+        result.value = del.slice(0, -1);
+      }
+      function mm() {
+        result.value = " ";
+      }
+      function ss() {
+        result.value = eval(result.value);
+      }
+    </script>
+  </body>
+</html>

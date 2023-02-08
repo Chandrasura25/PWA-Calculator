@@ -1,0 +1,53 @@
+{
+  "name": "The Neuromorphic Calculator",
+  "short_name": "Calculator",
+  "start_url": "./?utm_source=pwa",
+  "display": "standalone",
+  "description": "A Calculator at your disposal",
+  "dir": "ltr",
+  "lang": "en",
+  "theme_color": "#333",
+  "background_color": "#ffffff",
+  "orientation": "any",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "icons/maskable_icon_x512 (1).png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Calculator-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/Screenshot (162).png",
+      "sizes": "365x588",
+      "type": "image/png",
+      "description": "A screenshot of the home page"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "windows",
+      "url": ""
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "calculator",
+      "url": "/calculator",
+      "description": "Your BODMAS with You"
+    }
+  ]
+}
